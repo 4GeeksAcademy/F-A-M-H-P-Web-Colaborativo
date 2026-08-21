@@ -1,0 +1,24 @@
+{
+  "name": "f-a-m-h-p-web-colaborativo",
+  "version": "1.0.0",
+  "description": "The most basic boilerplate for any 4Geeks Academy student, start your very first website from scratch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4GeeksAcademy/F-A-M-H-P-Web-Colaborativo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/4GeeksAcademy/F-A-M-H-P-Web-Colaborativo/issues"
+  },
+  "homepage": "https://github.com/4GeeksAcademy/F-A-M-H-P-Web-Colaborativo#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}
