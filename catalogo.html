@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo | Maison Atelier</title>
+    <meta
+      name="description"
+      content="Explora el catálogo de Maison Atelier con prendas de calzado, camisas, pantalones y accesorios en estilo editorial francés."
+    />
+    <link rel="canonical" href="catalogo.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="bg-lino font-sans text-espresso antialiased">
+    <header id="site-navbar" class="border-b border-camello/30 bg-espresso text-lino">
+      <nav aria-label="Principal" class="mx-auto flex w-full max-w-7xl items-center gap-4 px-4 py-4 md:px-6">
+        <a href="index.html" class="font-serif text-2xl font-semibold tracking-wide">MAISON</a>
+        <form role="search" class="ml-auto hidden w-full max-w-xl md:block" action="#">
+          <label for="catalog-search" class="sr-only">Buscar productos</label>
+          <input
+            id="catalog-search"
+            name="search"
+            type="search"
+            placeholder="Buscar en el catálogo"
+            class="w-full rounded-full border border-camello/60 bg-lino px-4 py-2 text-sm text-espresso placeholder:text-espresso/60 focus:border-terracota focus:outline-none focus:ring-2 focus:ring-terracota/40"
+          />
+        </form>
+        <a
+          href="carrito.html"
+          class="rounded-full border border-camello/60 px-3 py-2 text-sm font-semibold transition hover:border-lino hover:bg-lino hover:text-espresso"
+          aria-label="Ir al carrito"
+        >
+          Carrito
+        </a>
+        <a
+          href="#"
+          class="rounded-full border border-camello/60 px-3 py-2 text-sm font-semibold transition hover:border-lino hover:bg-lino hover:text-espresso"
+          aria-label="Abrir cuenta de usuario"
+        >
+          Cuenta
+        </a>
+      </nav>
+      <form role="search" class="mx-auto max-w-7xl px-4 pb-4 md:hidden" action="#">
+        <label for="catalog-search-mobile" class="sr-only">Buscar productos</label>
+        <input
+          id="catalog-search-mobile"
+          name="search-mobile"
+          type="search"
+          placeholder="Buscar en el catálogo"
+          class="w-full rounded-full border border-camello/60 bg-lino px-4 py-2 text-sm text-espresso placeholder:text-espresso/60 focus:border-terracota focus:outline-none focus:ring-2 focus:ring-terracota/40"
+        />
+      </form>
+    </header>
+
+    <div class="border-b border-camello/30 bg-lino">
+      <nav aria-label="breadcrumb" class="mx-auto w-full max-w-7xl px-4 py-3 text-sm md:px-6">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center gap-2">
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center gap-2">
+            <a itemprop="item" href="index.html" class="text-espresso/80 hover:text-terracota">
+              <span itemprop="name">Inicio</span>
+            </a>
+            <meta itemprop="position" content="1" />
+            <span aria-hidden="true">&gt;</span>
+          </li>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+            <span itemprop="name" class="font-semibold text-terracota">Catálogo</span>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <main class="mx-auto w-full max-w-7xl px-4 py-8 md:px-6 lg:py-10">
+      <section class="mb-6 flex flex-col gap-2 lg:mb-8">
+        <h1 class="font-serif text-4xl font-semibold leading-tight text-espresso">Catálogo</h1>
+        <p class="max-w-2xl text-sm text-espresso/80 md:text-base">
+          Selección curada para vestir con equilibrio entre texturas nobles, tonos cálidos y siluetas contemporáneas.
+        </p>
+      </section>
+
+      <details class="mb-6 rounded-xl border border-camello/35 bg-white/40 p-4 lg:hidden">
+        <summary class="cursor-pointer list-none text-sm font-semibold uppercase tracking-wide text-espresso">
+          Filtrar
+        </summary>
+        <section aria-label="Filtros de producto" class="mt-4">
+          <h2 class="sr-only">Filtros de producto</h2>
+          <form action="#" class="space-y-5">
+            <fieldset>
+              <legend class="mb-3 text-sm font-semibold uppercase tracking-wide text-terracota">Categoría</legend>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="flex items-center gap-2"><input type="checkbox" name="categoria" value="calzado" class="accent-terracota" />Calzado</label>
+                <label class="flex items-center gap-2"><input type="checkbox" name="categoria" value="camisas" class="accent-terracota" />Camisas</label>
+                <label class="flex items-center gap-2"><input type="checkbox" name="categoria" value="pantalones" class="accent-terracota" />Pantalones</label>
+                <label class="flex items-center gap-2"><input type="checkbox" name="categoria" value="accesorios" class="accent-terracota" />Accesorios</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend class="mb-3 text-sm font-semibold uppercase tracking-wide text-terracota">Talla</legend>
+              <div class="flex flex-wrap gap-2 text-sm">
+                <label class="rounded-full border border-camello/50 px-3 py-1.5"><input type="checkbox" name="talla" value="XS" class="mr-1 accent-terracota" />XS</label>
+                <label class="rounded-full border border-camello/50 px-3 py-1.5"><input type="checkbox" name="talla" value="S" class="mr-1 accent-terracota" />S</label>
+                <label class="rounded-full border border-camello/50 px-3 py-1.5"><input type="checkbox" name="talla" value="M" class="mr-1 accent-terracota" />M</label>
+                <label class="rounded-full border border-camello/50 px-3 py-1.5"><input type="checkbox" name="talla" value="L" class="mr-1 accent-terracota" />L</label>
+                <label class="rounded-full border border-camello/50 px-3 py-1.5"><input type="checkbox" name="talla" value="XL" class="mr-1 accent-terracota" />XL</label>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+      </details>
+
+      <div class="grid gap-6 lg:grid-cols-[280px_1fr] lg:gap-8">
+        <aside aria-label="Filtros de producto" class="hidden rounded-xl border border-camello/35 bg-white/40 p-5 lg:block">
+          <h2 class="mb-5 font-serif text-2xl text-espresso">Filtros</h2>
+          <form action="#" class="space-y-8">
+            <fieldset>
+              <legend class="mb-3 text-sm font-semibold uppercase tracking-wide text-terracota">Categoría</legend>
+              <div class="space-y-2 text-sm">
+                <label class="flex items-center gap-2"><input type="checkbox" name="categoria-desktop" value="calzado" class="accent-terracota" />Calzado</label>
+                <label class="flex items-center gap-2"><input type="checkbox" name="categoria-desktop" value="camisas" class="accent-terracota" />Camisas</label>
+                <label class="flex items-center gap-2"><input type="checkbox" name="categoria-desktop" value="pantalones" class="accent-terracota" />Pantalones</label>
+                <label class="flex items-center gap-2"><input type="checkbox" name="categoria-desktop" value="accesorios" class="accent-terracota" />Accesorios</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend class="mb-3 text-sm font-semibold uppercase tracking-wide text-terracota">Talla</legend>
+              <div class="grid grid-cols-3 gap-2 text-sm">
+                <label class="rounded-lg border border-camello/50 px-2 py-2 text-center"><input type="checkbox" name="talla-desktop" value="XS" class="mr-1 accent-terracota" />XS</label>
+                <label class="rounded-lg border border-camello/50 px-2 py-2 text-center"><input type="checkbox" name="talla-desktop" value="S" class="mr-1 accent-terracota" />S</label>
+                <label class="rounded-lg border border-camello/50 px-2 py-2 text-center"><input type="checkbox" name="talla-desktop" value="M" class="mr-1 accent-terracota" />M</label>
+                <label class="rounded-lg border border-camello/50 px-2 py-2 text-center"><input type="checkbox" name="talla-desktop" value="L" class="mr-1 accent-terracota" />L</label>
+                <label class="rounded-lg border border-camello/50 px-2 py-2 text-center"><input type="checkbox" name="talla-desktop" value="XL" class="mr-1 accent-terracota" />XL</label>
+              </div>
+            </fieldset>
+          </form>
+        </aside>
+
+        <section aria-labelledby="catalogo-productos-title">
+          <h2 id="catalogo-productos-title" class="mb-5 font-serif text-2xl text-espresso">Colección Disponible</h2>
+          <ul
+            class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+            itemscope
+            itemtype="https://schema.org/ItemList"
+          >
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="1" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Camisa Terracota">
+                  <img itemprop="image" src="assets/img/producto-01.jpeg" alt="Modelo con camisa de lino terracota de manga larga" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Camisas</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Camisa Terracota</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="89.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">89,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="2" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Mocasines Arena">
+                  <img itemprop="image" src="assets/img/producto-02.jpeg" alt="Par de mocasines de cuero color arena sobre piso de madera" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Calzado</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Mocasines Arena</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="129.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">129,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="3" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Pantalón Cobre Recto">
+                  <img itemprop="image" src="assets/img/producto-03.jpeg" alt="Pantalón recto color cobre combinado con camisa beige" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Pantalones</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Pantalón Cobre Recto</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="99.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">99,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="4" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Bufanda Siena">
+                  <img itemprop="image" src="assets/img/producto-04.jpeg" alt="Bufanda ligera color siena doblada sobre banco de lino" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Accesorios</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Bufanda Siena</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="49.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">49,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="5" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Camisa Marfil Clásica">
+                  <img itemprop="image" src="assets/img/producto-05.jpeg" alt="Camisa marfil clásica con botones nacarados" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Camisas</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Camisa Marfil Clásica</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="84.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">84,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="6" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Botines Cedro">
+                  <img itemprop="image" src="assets/img/producto-06.jpeg" alt="Botines de cuero color cedro con suela robusta" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Calzado</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Botines Cedro</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="154.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">154,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="7" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Pantalón Oliva Slim">
+                  <img itemprop="image" src="assets/img/producto-07.jpeg" alt="Pantalón slim oliva apagado en percha de madera" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Pantalones</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Pantalón Oliva Slim</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="94.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">94,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="8" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Cinturón Arcilla">
+                  <img itemprop="image" src="assets/img/producto-08.jpeg" alt="Cinturón de piel en tono arcilla con hebilla dorada" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Accesorios</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Cinturón Arcilla</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="59.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">59,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="9" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Blusa Nuez">
+                  <img itemprop="image" src="assets/img/producto-09.jpeg" alt="Blusa color nuez con cuello abierto" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Camisas</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Blusa Nuez</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="79.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">79,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="10" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Zapatilla Minimal Tiza">
+                  <img itemprop="image" src="assets/img/producto-10.jpeg" alt="Zapatilla minimalista color tiza con detalles beige" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Calzado</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Zapatilla Minimal Tiza</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="119.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">119,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="11" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Pantalón Lino Hueso">
+                  <img itemprop="image" src="assets/img/producto-11.jpeg" alt="Pantalón de lino color hueso doblado en mesa de madera" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Pantalones</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Pantalón Lino Hueso</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="88.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">88,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="12" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Bolso Tostado Mediano">
+                  <img itemprop="image" src="assets/img/producto-12.jpeg" alt="Bolso mediano color tostado con correa ajustable" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Accesorios</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Bolso Tostado Mediano</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="139.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">139,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="13" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Camisa Rayada Duna">
+                  <img itemprop="image" src="assets/img/producto-13.jpeg" alt="Camisa rayada fina en tonos duna y marfil" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Camisas</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Camisa Rayada Duna</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="92.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">92,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="14" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Sandalia Palma">
+                  <img itemprop="image" src="assets/img/producto-14.jpeg" alt="Sandalia abierta color palma con tiras finas" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Calzado</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Sandalia Palma</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="102.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">102,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="15" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Pantalón Terracota Crop">
+                  <img itemprop="image" src="assets/img/producto-15.jpeg" alt="Pantalón crop en tono terracota combinado con top neutro" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Pantalones</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Pantalón Terracota Crop</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="97.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">97,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="16" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Gorro Punto Latte">
+                  <img itemprop="image" src="assets/img/producto-16.jpeg" alt="Gorro de punto fino color latte para temporada fría" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Accesorios</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Gorro Punto Latte</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="37.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">37,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="17" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Blusa Seda Canela">
+                  <img itemprop="image" src="assets/img/producto-17.jpeg" alt="Blusa de seda color canela con caída fluida" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Camisas</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Blusa Seda Canela</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="112.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">112,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="18" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Derby Ébano">
+                  <img itemprop="image" src="assets/img/producto-18.jpeg" alt="Zapato derby color ébano con acabado mate" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Calzado</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Derby Ébano</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="168.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">168,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="19" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Falda Pantalón Tostada">
+                  <img itemprop="image" src="assets/img/producto-19.jpeg" alt="Falda pantalón tostada con cinturilla alta" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Pantalones</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Falda Pantalón Tostada</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="91.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">91,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+              <meta itemprop="position" content="20" />
+              <article class="overflow-hidden rounded-xl border border-camello/35 bg-white/60 shadow-sm">
+                <a href="producto.html" aria-label="Ver Pañuelo Estampado Sahara">
+                  <img itemprop="image" src="assets/img/producto-20.jpeg" alt="Pañuelo estampado en tonos sahara y terracota" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+                </a>
+                <div class="space-y-2 p-4">
+                  <span class="inline-block rounded-full border border-oliva/50 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-oliva">Accesorios</span>
+                  <h3 itemprop="name" class="font-serif text-lg text-espresso"><a href="producto.html">Pañuelo Estampado Sahara</a></h3>
+                  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="flex items-center justify-between">
+                    <meta itemprop="priceCurrency" content="EUR" />
+                    <meta itemprop="price" content="42.00" />
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <span class="text-lg font-semibold text-terracota">42,00 €</span>
+                    <span class="text-xs uppercase tracking-wide text-oliva">Disponible</span>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer id="site-footer" class="mt-12 border-t border-camello/30 bg-espresso text-lino">
+      <div class="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 md:grid-cols-3 md:px-6">
+        <nav aria-label="Categorías">
+          <h2 class="mb-3 font-serif text-xl">Categorías</h2>
+          <ul class="space-y-2 text-sm">
+            <li><a href="catalogo.html?categoria=calzado" class="hover:text-camello">Calzado</a></li>
+            <li><a href="catalogo.html?categoria=camisas" class="hover:text-camello">Camisas</a></li>
+            <li><a href="catalogo.html?categoria=pantalones" class="hover:text-camello">Pantalones</a></li>
+            <li><a href="catalogo.html?categoria=accesorios" class="hover:text-camello">Accesorios</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Legal">
+          <h2 class="mb-3 font-serif text-xl">Legal</h2>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-camello">Términos y condiciones</a></li>
+            <li><a href="#" class="hover:text-camello">Política de privacidad</a></li>
+            <li><a href="#" class="hover:text-camello">Sobre la marca</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Contacto">
+          <h2 class="mb-3 font-serif text-xl">Contacto</h2>
+          <ul class="space-y-2 text-sm">
+            <li><a href="mailto:hola@maisonatelier.fr" class="hover:text-camello">hola@maisonatelier.fr</a></li>
+            <li><a href="tel:+33140203040" class="hover:text-camello">+33 1 40 20 30 40</a></li>
+            <li>Rue du Faubourg Saint-Honoré, Paris</li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
