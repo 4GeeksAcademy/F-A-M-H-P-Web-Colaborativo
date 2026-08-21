@@ -38,12 +38,17 @@
 
 <body class="bg-[#F7F2EA] text-[#35251A]">
 <header class="border-b border-[#35251A]/10">
-    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-        <a href="index.html" class="font-editorial text-2xl font-semibold">
+   <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+        <a
+            href="index.html"
+            class="font-editorial text-xl sm:text-2xl font-semibold"
+        >
             FAMHP
         </a>
 
-        <div class="flex items-center gap-6 text-sm font-medium">
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
             <a href="index.html" class="hover:text-[#9C4A2C] transition">
                 Inicio
             </a>
@@ -56,25 +61,30 @@
                 Carrito
             </a>
         </div>
-    </nav>
+
+    </div>
+</nav>
 </header>
 
-<main class="max-w-7xl mx-auto px-6 py-12">
+<main
+    class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12"
+    itemscope
+    itemtype="https://schema.org/Product"
+>
 
     <section
         class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
-        itemscope
-        itemtype="https://schema.org/Product"
+        
     >
 
         <!-- Imagen del producto -->
         <div class="bg-[#EDE4D8] rounded-2xl overflow-hidden">
-            <img
-                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
-                alt="Camisa premium color tierra"
-                class="w-full h-[500px] object-cover"
-                itemprop="image"
-            >
+                <img
+            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+            alt="Camisa premium color tierra"
+            class="w-full h-[360px] sm:h-[480px] lg:h-[625px] object-cover"
+            itemprop="image"
+                >
         </div>
 
         <!-- Información del producto -->
@@ -107,7 +117,7 @@
                     Talla
                 </h2>
 
-                <div class="flex gap-3">
+                <div class="flex flex-wrap gap-3">
                     <button class="w-12 h-12 border border-[#35251A]/30 rounded-lg hover:bg-[#C08552] hover:text-white transition">
                         S
                     </button>
@@ -145,11 +155,11 @@
 
             <!-- Botón -->
             <a
-                href="carrito.html"
-                class="bg-[#35251A] text-[#F7F2EA] text-center py-4 px-8 rounded-lg font-semibold hover:bg-[#9C4A2C] transition"
-            >
-                Agregar al carrito
-            </a>
+    href="carrito.html"
+    class="block w-full min-w-0 bg-[#35251A] text-[#F7F2EA] text-center py-4 px-4 rounded-lg font-semibold hover:bg-[#9C4A2C] transition whitespace-normal break-words"
+>
+    Agregar al carrito
+</a>
 
         </article>
 
@@ -216,8 +226,8 @@
     </div>
 </section>
 </main>
-<footer class="mt-20 border-t border-[#35251A]/10 bg-[#35251A] text-[#F7F2EA]">
-    <div class="max-w-7xl mx-auto px-6 py-12">
+<footer class="mt-20 border-t border-[#35251A]/10 bg-[#35251A] text-[#F7F2EA] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
@@ -296,9 +306,14 @@
 
                 <address class="not-italic text-sm leading-7 text-[#F7F2EA]/70">
                     París, Francia<br>
-                    contacto@famhp.com<br>
-                    +33 1 00 00 00 00
+                     +33 1 00 00 00 00
                 </address>
+                <a
+    href="mailto:contacto@famhp.com"
+    class="break-all hover:text-[#C08552] transition"
+>
+    contacto@famhp.com
+</a>
             </section>
 
         </div>
