@@ -1,0 +1,236 @@
+:root {
+  --ink-950: #191216;
+  --ink-700: #4f434b;
+  --card: #fffdf9;
+  --line: #e5d8cf;
+  --brand: #a82332;
+  --shadow: 0 18px 32px rgba(34, 20, 28, 0.13);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  color: var(--ink-950);
+  background:
+    radial-gradient(circle at 10% 10%, #f8e7da 0%, transparent 34%),
+    radial-gradient(circle at 90% 20%, #ead6ce 0%, transparent 28%),
+    linear-gradient(140deg, #fff9f1 0%, #f9efe6 100%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: -0.02em;
+}
+
+.site-header,
+main,
+.site-footer {
+  width: min(1140px, 92vw);
+  margin-inline: auto;
+}
+
+.site-header {
+  padding: 2rem 0 1rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.2rem;
+  color: var(--brand);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4.4vw, 3rem);
+}
+
+main {
+  padding-bottom: 3.2rem;
+}
+
+.cart-page {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.cart-page {
+  padding: clamp(1rem, 2vw, 1.6rem);
+}
+
+.cart-header h2,
+.cart-summary h3 {
+  margin: 0;
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+}
+
+.cart-header p {
+  margin: 0.3rem 0 0;
+  color: var(--ink-700);
+}
+
+.cart-layout {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 1.1rem;
+}
+
+.cart-list,
+.cart-summary {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.cart-list {
+  padding: 1rem;
+}
+
+.cart-head-row,
+.cart-item-row {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 0.8fr 1fr;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.cart-head-row {
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-700);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.45rem 0.7rem;
+}
+
+.cart-item-row {
+  border-bottom: 1px solid #efe4dc;
+  padding: 0.8rem 0.45rem;
+}
+
+.cart-item-row:last-child {
+  border-bottom: none;
+}
+
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.product-thumb {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+.cart-summary {
+  padding: 1rem;
+  align-self: start;
+}
+
+.cart-summary h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.cart-summary dl {
+  margin: 1rem 0 1.25rem;
+}
+
+.cart-summary dl div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.72rem;
+  color: var(--ink-700);
+}
+
+.cart-summary dt,
+.cart-summary dd {
+  margin: 0;
+}
+
+.grand-total {
+  border-top: 1px solid var(--line);
+  padding-top: 0.8rem;
+  font-size: 1.1rem;
+  color: var(--ink-950);
+  font-weight: 700;
+}
+
+.buy-button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  color: #fff;
+  background: linear-gradient(120deg, var(--brand) 0%, #cc3649 100%);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.buy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(168, 35, 50, 0.3);
+}
+
+.site-footer {
+  margin-bottom: 2.2rem;
+  margin-top: 1rem;
+  color: var(--ink-700);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .cart-head-row {
+    display: none;
+  }
+
+  .cart-item-row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .cart-item-row > span::before {
+    color: var(--ink-700);
+    margin-right: 0.4rem;
+    font-size: 0.82rem;
+  }
+
+  .cart-item-row > span:nth-child(2)::before {
+    content: "Precio:";
+  }
+
+  .cart-item-row > span:nth-child(3)::before {
+    content: "Cantidad:";
+  }
+
+  .cart-item-row > span:nth-child(4)::before {
+    content: "Total:";
+  }
+}
